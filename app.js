@@ -193,6 +193,7 @@ const state = {
 const monthsHeader = document.querySelector("#monthsHeader");
 const cropRows = document.querySelector("#cropRows");
 const cropSearch = document.querySelector("#cropSearch");
+const clearSearch = document.querySelector("#clearSearch");
 const categorySelect = document.querySelector("#categorySelect");
 const resultCount = document.querySelector("#resultCount");
 const emptyState = document.querySelector("#emptyState");
@@ -469,7 +470,16 @@ document.querySelectorAll(".action-filter").forEach((button) => {
 
 cropSearch.addEventListener("input", (event) => {
   state.search = event.target.value;
+  clearSearch.hidden = event.target.value.length === 0;
   renderCrops();
+});
+
+clearSearch.addEventListener("click", () => {
+  cropSearch.value = "";
+  state.search = "";
+  clearSearch.hidden = true;
+  renderCrops();
+  cropSearch.focus();
 });
 
 categorySelect.addEventListener("change", (event) => {
