@@ -12,28 +12,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;0,700;1,600&family=Nunito+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css?v=20260907-36" />
+    <link rel="stylesheet" href="theme-original.css?v=20260907-1" />
   </head>
-  <body>
+  <body data-theme="original">
     <!--
-      THESIS: Un índex botànic de treball, no una reproducció antiga ni un tauler SaaS.
-      OWN-WORLD: Ivori, verd tinta, bordeus i ocre; tipografia editorial, filets fins i UI sans.
-      STORY: La referència climàtica local condueix directament al calendari de l’estació actual.
-      FIRST VIEWPORT: Titular editorial centrat en un camp d’ivori.
-      FORM: Graella editorial dividida amb una capa funcional discreta.
+      Versió verda original del calendari, conservada amb les dades i interaccions actuals.
+      Les fulles són SVG inline i tota la resta de la identitat visual es construeix amb CSS.
     -->
     <header class="hero">
       <div class="hero-content">
+        <p class="eyebrow">Planifica · sembra · cultiva</p>
         <h1>Calendari de <em>l’hort</em></h1>
+        <p class="hero-copy">
+          Descobreix quan començar el planter, sembrar, plantar i collir cada cultiu a la Partida de
+          Baiona.
+        </p>
       </div>
+
+      <svg class="hero-leaf hero-leaf-left" viewBox="0 0 180 160" aria-hidden="true">
+        <path d="M14 150C54 117 81 78 97 16" />
+        <path d="M49 113C27 111 15 99 8 78c22 0 36 11 41 35Z" />
+        <path d="M72 80c-9-21-3-39 17-54 8 23 2 41-17 54Z" />
+        <path d="M91 45c14-15 31-18 51-9-14 18-31 21-51 9Z" />
+      </svg>
+      <svg class="hero-leaf hero-leaf-right" viewBox="0 0 190 170" aria-hidden="true">
+        <path d="M180 160C136 124 108 81 94 13" />
+        <path d="M145 119c23-2 37-15 42-38-24 2-38 14-42 38Z" />
+        <path d="M119 81c11-22 6-42-14-59-11 24-6 44 14 59Z" />
+        <path d="M98 44c-14-16-32-20-53-11 14 19 32 23 53 11Z" />
+      </svg>
     </header>
 
     <main>
       <section class="planner" aria-labelledby="plannerTitle">
-        <h2 id="plannerTitle" class="sr-only">Calendari de cultius</h2>
+        <div class="planner-heading">
+          <div>
+            <p class="section-kicker">Calendari anual</p>
+            <h2 id="plannerTitle">Què vols cultivar?</h2>
+          </div>
+        </div>
 
         <div class="season-tabs" role="group" aria-label="Filtra per estació">
           <button class="season-tab" type="button" data-season="all">Tot l’any</button>
@@ -134,7 +155,9 @@
       </section>
 
       <aside class="tip-card">
+        <div class="tip-icon" aria-hidden="true">☼</div>
         <div class="tip-copy">
+          <p class="section-kicker">Un consell abans de començar</p>
           <h2>Ajustat al clima de la Partida de Baiona</h2>
           <p>
             Les dates tenen en compte els estius calorosos i secs de l’Alt Camp, els hiverns

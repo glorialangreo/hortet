@@ -25,5 +25,5 @@ entre agost i setembre i es cull de novembre a abril. La referència del cicle t
 ## Versions visuals
 
 `index.html` és la versió principal, amb colors estacionals i una direcció gràfica més funk.
-Si prefereixes una presentació més neutra, `arxiu.html` utilitza les mateixes dades, filtres i
-interaccions amb un disseny editorial més discret.
+Si prefereixes una presentació més neutra, `arxiu.html` conserva el tema verd original del
+projecte amb les mateixes dades, filtres i interaccions actuals.

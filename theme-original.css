@@ -1,0 +1,490 @@
+body[data-theme="original"] {
+  --ink: #173d2b;
+  --ink-soft: #567063;
+  --cream: #faf7ee;
+  --paper: #fffdf8;
+  --paper-deep: #f2f3e9;
+  --line: #e3e3d7;
+  --line-soft: #d9ddd3;
+  --green: #1e6242;
+  --green-dark: #123c29;
+  --burgundy: #a9684b;
+  --ochre: #e8c375;
+  --sage: #7d9f68;
+  --font-editorial: "Bitter", Georgia, serif;
+  --font-functional: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+  --seedbed: #e7a552;
+  --seedbed-soft: #f8e5c9;
+  --direct: #7d9f68;
+  --direct-soft: #e0ead8;
+  --planting: #cb6e4d;
+  --planting-soft: #f4d7cc;
+  --harvest: #7160a0;
+  --harvest-soft: #e4dff0;
+  --shadow: 0 22px 60px rgb(24 61 43 / 11%);
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 10% 45%, rgb(201 219 190 / 22%), transparent 24rem),
+    var(--cream);
+  font-family: var(--font-functional);
+}
+
+body[data-theme="original"] .hero {
+  min-height: 410px;
+  height: auto;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(rgb(14 60 38 / 88%), rgb(14 60 38 / 93%)),
+    repeating-linear-gradient(115deg, transparent 0 72px, rgb(255 255 255 / 3%) 73px 74px),
+    #144c32;
+  border: 0;
+}
+
+body[data-theme="original"] .hero::after {
+  position: absolute;
+  right: -7%;
+  bottom: -170px;
+  left: -7%;
+  height: 215px;
+  content: "";
+  background: var(--cream);
+  border-radius: 50% 50% 0 0 / 38% 38% 0 0;
+}
+
+body[data-theme="original"] .hero-content {
+  position: relative;
+  top: auto;
+  left: auto;
+  z-index: 1;
+  width: min(720px, calc(100% - 48px));
+  padding: 64px 0 105px;
+  margin: 0 auto;
+  text-align: center;
+  transform: none;
+}
+
+body[data-theme="original"] .eyebrow,
+body[data-theme="original"] .section-kicker {
+  margin: 0 0 13px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+body[data-theme="original"] .eyebrow {
+  color: #e8c375;
+}
+
+body[data-theme="original"] .hero h1 {
+  color: #fff;
+  font-family: var(--font-editorial);
+  font-size: clamp(3rem, 7vw, 5.25rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  white-space: normal;
+}
+
+body[data-theme="original"] .hero h1 em {
+  color: #f3d391;
+  font-weight: inherit;
+}
+
+body[data-theme="original"] .hero-copy {
+  max-width: 570px;
+  margin: 22px auto 0;
+  color: rgb(255 255 255 / 76%);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+body[data-theme="original"] .hero-leaf {
+  position: absolute;
+  z-index: 0;
+  width: 180px;
+  fill: rgb(245 216 147 / 3%);
+  stroke: rgb(238 211 142 / 22%);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.2;
+}
+
+body[data-theme="original"] .hero-leaf-left {
+  bottom: 20px;
+  left: 3%;
+}
+
+body[data-theme="original"] .hero-leaf-right {
+  right: 2%;
+  bottom: 10px;
+}
+
+body[data-theme="original"] main {
+  width: min(1240px, calc(100% - 40px));
+  margin: -58px auto 0;
+}
+
+body[data-theme="original"] .planner {
+  position: relative;
+  z-index: 3;
+  padding: 36px;
+  background: var(--paper);
+  border: 1px solid rgb(31 91 62 / 9%);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+body[data-theme="original"] .planner-heading {
+  display: flex;
+  gap: 24px;
+  align-items: end;
+  justify-content: space-between;
+}
+
+body[data-theme="original"] .section-kicker {
+  color: #bd704f;
+}
+
+body[data-theme="original"] .planner h2,
+body[data-theme="original"] .tip-card h2,
+body[data-theme="original"] .help-dialog h2 {
+  font-size: clamp(1.8rem, 3vw, 2.45rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+body[data-theme="original"] .season-tabs {
+  gap: 8px;
+  padding: 6px;
+  margin-top: 30px;
+  background: #f2f3e9;
+  border: 0;
+  border-radius: 14px;
+}
+
+body[data-theme="original"] .season-tab {
+  flex: 1 0 max-content;
+  min-width: 116px;
+  padding: 11px 16px;
+  font-size: 0.86rem;
+  border: 0;
+  border-radius: 10px;
+}
+
+body[data-theme="original"] .season-tab span {
+  color: #a9684b;
+}
+
+body[data-theme="original"] .season-tab:hover {
+  color: inherit;
+  background: rgb(255 255 255 / 62%);
+}
+
+body[data-theme="original"] .season-tab.active {
+  color: #fff;
+  background: var(--green);
+  box-shadow: 0 5px 13px rgb(30 98 66 / 20%);
+}
+
+body[data-theme="original"] .season-tab.active span {
+  color: #f3d391;
+}
+
+body[data-theme="original"] .action-filter {
+  color: var(--ink-soft);
+  background: #fff;
+  border-color: #d9ddd3;
+  border-radius: 999px;
+}
+
+body[data-theme="original"] .action-filter:hover {
+  color: var(--ink-soft);
+  background: #fff;
+  border-color: #9eaaa3;
+}
+
+body[data-theme="original"] .search-box input,
+body[data-theme="original"] .category-filter select {
+  height: 44px;
+  color: var(--ink);
+  background: #fff;
+  border-color: #d9ddd3;
+  border-radius: 10px;
+}
+
+body[data-theme="original"] .search-box input:focus,
+body[data-theme="original"] .category-filter select:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgb(30 98 66 / 12%);
+}
+
+body[data-theme="original"] .gantt-shell {
+  margin-top: 18px;
+  overflow: hidden;
+  border-color: var(--line);
+  border-radius: 14px;
+}
+
+body[data-theme="original"] .gantt-scroll {
+  background: #fff;
+}
+
+body[data-theme="original"] .gantt-header,
+body[data-theme="original"] .crop-column-title {
+  color: #607269;
+  background: #f4f5ed;
+  border-color: var(--line);
+}
+
+body[data-theme="original"] .month-label.current {
+  color: var(--green);
+  background: #e8eee4;
+}
+
+body[data-theme="original"] .month-label.current::after {
+  background: var(--green);
+  border-radius: 3px 3px 0 0;
+}
+
+body[data-theme="original"] .crop-row {
+  border-bottom-color: #ecece4;
+}
+
+body[data-theme="original"] .crop-meta {
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+body[data-theme="original"] .crop-row:nth-child(even) .crop-meta {
+  background: #fbfbf5;
+}
+
+body[data-theme="original"] .crop-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  color: var(--green);
+  background: #e7eee2;
+  border-radius: 50%;
+  place-items: center;
+}
+
+body[data-theme="original"] .crop-name {
+  font-family: var(--font-editorial);
+  font-size: 0.98rem;
+}
+
+body[data-theme="original"] .crop-category {
+  color: #809087;
+  font-style: normal;
+}
+
+body[data-theme="original"] .timeline {
+  background-image: linear-gradient(to right, transparent calc(100% - 1px), #edede6 0);
+}
+
+body[data-theme="original"] .month-highlight {
+  background: rgb(46 104 70 / 4.5%);
+}
+
+body[data-theme="original"] .period {
+  border: 0;
+  border-radius: 8px;
+}
+
+body[data-theme="original"] .period:focus-visible,
+body[data-theme="original"] .period:hover,
+body[data-theme="original"] .period.is-active {
+  outline-color: #fff;
+}
+
+body[data-theme="original"] .tip-card {
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+  max-width: 850px;
+  padding: 42px 48px;
+  margin: 52px auto 72px;
+  background: #e6ecdd;
+  border: 0;
+  border-radius: 24px;
+}
+
+body[data-theme="original"] .tip-icon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  color: #fff;
+  font-size: 1.6rem;
+  background: var(--green);
+  border-radius: 50%;
+  place-items: center;
+}
+
+body[data-theme="original"] .tip-copy {
+  max-width: none;
+}
+
+body[data-theme="original"] .tip-card h2 {
+  max-width: none;
+  font-size: 1.75rem;
+}
+
+body[data-theme="original"] .tip-card p {
+  margin-top: 13px;
+  color: #526b5e;
+  line-height: 1.7;
+}
+
+body[data-theme="original"] .help-button {
+  margin-top: 18px;
+  color: var(--green);
+}
+
+body[data-theme="original"] footer {
+  color: #c9d4cc;
+  background: var(--green-dark);
+  border: 0;
+}
+
+body[data-theme="original"] .help-dialog {
+  color: var(--ink);
+  background: var(--paper);
+  border: 0;
+  border-radius: 22px;
+  box-shadow: 0 30px 90px rgb(4 34 20 / 28%);
+}
+
+body[data-theme="original"] .help-dialog::backdrop {
+  background: rgb(7 37 23 / 66%);
+  backdrop-filter: blur(3px);
+}
+
+body[data-theme="original"] .dialog-close {
+  background: #eff1e9;
+  border-radius: 50%;
+}
+
+body[data-theme="original"] .help-steps > div {
+  padding: 18px;
+  background: #f5f5ee;
+  border: 0;
+  border-radius: 14px;
+}
+
+body[data-theme="original"] .step-number {
+  border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+  body[data-theme="original"] .hero {
+    min-height: 380px;
+  }
+
+  body[data-theme="original"] .hero-content {
+    width: calc(100% - 32px);
+    padding: 52px 0 105px;
+  }
+
+  body[data-theme="original"] .hero-leaf {
+    opacity: 0.5;
+  }
+
+  body[data-theme="original"] main {
+    width: min(100% - 24px, 1240px);
+  }
+
+  body[data-theme="original"] .planner {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  body[data-theme="original"] .planner-heading {
+    display: block;
+  }
+
+  body[data-theme="original"] .season-tabs {
+    gap: 2px;
+    overflow: visible;
+    padding: 5px;
+  }
+
+  body[data-theme="original"] .season-tab {
+    min-width: 0;
+    padding: 10px 4px;
+    font-size: 0.7rem;
+  }
+
+  body[data-theme="original"] .action-filter-bar {
+    gap: 10px;
+    align-items: center;
+  }
+
+  body[data-theme="original"] .action-filters {
+    flex: 1;
+    flex-wrap: nowrap;
+    gap: 4px;
+  }
+
+  body[data-theme="original"] .action-filter {
+    flex: 1 1 auto;
+    gap: 4px;
+    justify-content: center;
+    min-width: 0;
+    padding: 8px 6px;
+    font-size: 0.66rem;
+    white-space: nowrap;
+  }
+
+  body[data-theme="original"] .action-filter svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  body[data-theme="original"] .tip-card {
+    padding: 30px 24px;
+    margin: 36px auto 52px;
+  }
+}
+
+@media (max-width: 520px) {
+  body[data-theme="original"] .hero h1 {
+    font-size: clamp(2.75rem, 13vw, 4rem);
+  }
+
+  body[data-theme="original"] .hero-copy {
+    font-size: 0.94rem;
+  }
+
+  body[data-theme="original"] .tip-card {
+    display: block;
+  }
+
+  body[data-theme="original"] .tip-icon {
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  body[data-theme="original"] .planner {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  body[data-theme="original"] .season-tab {
+    font-size: 0.66rem;
+  }
+
+  body[data-theme="original"] .season-tab span,
+  body[data-theme="original"] .action-filter svg {
+    display: none;
+  }
+
+  body[data-theme="original"] .action-filter {
+    padding-right: 3px;
+    padding-left: 3px;
+    font-size: 0.61rem;
+  }
+}
