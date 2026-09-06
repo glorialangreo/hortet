@@ -15,8 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;0,700;1,600&family=Nunito+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260907-38" />
-    <link rel="stylesheet" href="theme-original.css?v=20260907-2" />
+    <link rel="stylesheet" href="styles.css?v=20260907-40" />
+    <link rel="stylesheet" href="theme-original.css?v=20260907-3" />
   </head>
   <body data-theme="original">
     <!--
@@ -78,6 +78,14 @@
             <button class="action-filter all active" type="button" data-action="all" aria-pressed="true">
               Totes
             </button>
+            <button class="action-filter seedbed active" type="button" data-action="seedbed" aria-pressed="true">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M3 15.5h14M5 15.5l1 2h8l1-2M10 15V8" />
+                <path d="M10 10c-3 0-4.5-1.5-4.5-4.5C8.5 5.5 10 7 10 10ZM10 8c.5-3 2-4.5 5-4.5-.5 3-2 4.5-5 4.5Z" />
+              </svg>
+              <span class="action-label-full">Sembra (planter)</span>
+              <span class="action-label-short">Planter</span>
+            </button>
             <button class="action-filter direct active" type="button" data-action="direct" aria-pressed="true">
               <svg viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M2.5 14.5h15M4 17h12" />
@@ -86,14 +94,6 @@
               </svg>
               <span class="action-label-full">Sembra (directa)</span>
               <span class="action-label-short">Directa</span>
-            </button>
-            <button class="action-filter seedbed active" type="button" data-action="seedbed" aria-pressed="true">
-              <svg viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M3 15.5h14M5 15.5l1 2h8l1-2M10 15V8" />
-                <path d="M10 10c-3 0-4.5-1.5-4.5-4.5C8.5 5.5 10 7 10 10ZM10 8c.5-3 2-4.5 5-4.5-.5 3-2 4.5-5 4.5Z" />
-              </svg>
-              <span class="action-label-full">Sembra (planter)</span>
-              <span class="action-label-short">Sembra en planter</span>
             </button>
             <button class="action-filter planting active" type="button" data-action="planting" aria-pressed="true">
               <svg viewBox="0 0 20 20" aria-hidden="true">
@@ -221,6 +221,6 @@
       <span>Calendari orientatiu · Partida de Baiona, Alt Camp</span>
     </footer>
 
-    <script src="app.js?v=20260907-10"></script>
+    <script src="app.js?v=20260907-12"></script>
   </body>
 </html>

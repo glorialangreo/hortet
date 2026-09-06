@@ -562,6 +562,21 @@ main {
     transform 140ms ease;
 }
 
+.period-symbol {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.period-symbol svg {
+  width: 10px;
+  height: 10px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
 .period:hover,
 .period:focus-visible,
 .period.is-active {
@@ -893,10 +908,6 @@ footer a:hover {
   }
 
   .action-filter.all {
-    display: none;
-  }
-
-  .action-filter svg {
     display: none;
   }
 

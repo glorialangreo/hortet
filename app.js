@@ -139,15 +139,47 @@ const crops = [
 ];
 
 const actionMeta = {
-  direct: { label: "Sembra (directa)", shortLabel: "Directa", compactLabel: "Directa", symbol: "•" },
   seedbed: {
     label: "Sembra (planter)",
     shortLabel: "Sembra en planter",
     compactLabel: "Sembra en planter",
-    symbol: "⌑",
+    icon: `
+      <svg viewBox="0 0 20 20">
+        <path d="M3 15.5h14M5 15.5l1 2h8l1-2M10 15V8" />
+        <path d="M10 10c-3 0-4.5-1.5-4.5-4.5C8.5 5.5 10 7 10 10ZM10 8c.5-3 2-4.5 5-4.5-.5 3-2 4.5-5 4.5Z" />
+      </svg>`,
   },
-  planting: { label: "Plantació", shortLabel: "Plantació", compactLabel: "Plantació", symbol: "↓" },
-  harvest: { label: "Collita / floració", shortLabel: "Collita", compactLabel: "Collita", symbol: "✦" },
+  direct: {
+    label: "Sembra (directa)",
+    shortLabel: "Sembra directa",
+    compactLabel: "Sembra directa",
+    icon: `
+      <svg viewBox="0 0 20 20">
+        <path d="M2.5 14.5h15M4 17h12" />
+        <ellipse cx="6" cy="9" rx="1.8" ry="2.4" transform="rotate(-35 6 9)" />
+        <ellipse cx="13.5" cy="7.5" rx="1.8" ry="2.4" transform="rotate(35 13.5 7.5)" />
+      </svg>`,
+  },
+  planting: {
+    label: "Plantació",
+    shortLabel: "Plantació",
+    compactLabel: "Plantació",
+    icon: `
+      <svg viewBox="0 0 20 20">
+        <path d="M10 2.5v10M6.5 9l3.5 3.5L13.5 9M2.5 16h15" />
+      </svg>`,
+  },
+  harvest: {
+    label: "Collita / floració",
+    shortLabel: "Collita / floració",
+    compactLabel: "Collita",
+    icon: `
+      <svg viewBox="0 0 20 20">
+        <circle cx="5.5" cy="6" r="2.5" />
+        <circle cx="5.5" cy="14" r="2.5" />
+        <path d="m7.7 7.2 8.8 5.6M7.7 12.8l8.8-5.6" />
+      </svg>`,
+  },
 };
 const actionTypes = Object.keys(actionMeta);
 
@@ -301,7 +333,7 @@ function renderPeriods(periods, type, lane) {
           data-label="${periodLabel(type, periodStart, periodEnd)}"
           title="${periodLabel(type, periodStart, periodEnd)}"
         >
-          <span class="period-symbol" aria-hidden="true">${actionMeta[type].symbol}</span>
+          <span class="period-symbol" aria-hidden="true">${actionMeta[type].icon}</span>
           <span class="period-label" aria-hidden="true">${end === start ? actionMeta[type].compactLabel : actionMeta[type].shortLabel}</span>
         </span>`,
     )

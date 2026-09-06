@@ -615,10 +615,6 @@ body[data-theme="bold"] .dialog-note {
     box-shadow: 2px 2px 0 var(--green);
   }
 
-  body[data-theme="bold"] .action-filter.seedbed {
-    flex-grow: 1.75;
-  }
-
   body[data-theme="bold"] .action-filter svg {
     flex: 0 0 auto;
     width: 14px;
