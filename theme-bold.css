@@ -314,14 +314,20 @@ body[data-theme="bold"] .action-filter {
   padding: 7px 13px;
   color: var(--green);
   font-size: 0.8rem;
-  background: var(--control-bg);
+  background: transparent;
   border: 2px solid var(--green);
   box-shadow: 3px 3px 0 var(--green);
 }
 
-body[data-theme="bold"] .action-filter:hover {
-  color: var(--light);
-  background: var(--burgundy);
+body[data-theme="bold"] .action-filter:not(.active) {
+  box-shadow: none;
+}
+
+body[data-theme="bold"] .action-filter:not(.active):hover {
+  color: var(--green);
+  background: transparent;
+  border-color: var(--green);
+  box-shadow: 2px 2px 0 var(--green);
 }
 
 body[data-theme="bold"] .action-filter.all.active {

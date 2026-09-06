@@ -194,14 +194,14 @@ body[data-theme="original"] .season-tab.active span {
 
 body[data-theme="original"] .action-filter {
   color: var(--ink-soft);
-  background: #fff;
+  background: transparent;
   border-color: #d9ddd3;
   border-radius: 999px;
 }
 
 body[data-theme="original"] .action-filter:hover {
   color: var(--ink-soft);
-  background: #fff;
+  background: transparent;
   border-color: #9eaaa3;
 }
 
