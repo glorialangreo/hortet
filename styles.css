@@ -589,12 +589,32 @@ main {
 }
 
 .period:hover,
-.period:focus-visible {
+.period:focus-visible,
+.period.is-active {
   z-index: 2;
   filter: saturate(1.15) brightness(0.96);
   outline: 2px solid var(--paper);
   box-shadow: 0 0 0 3px currentColor;
   transform: scaleY(1.18);
+}
+
+.period-tooltip {
+  position: fixed;
+  z-index: 1000;
+  max-width: min(260px, calc(100vw - 20px));
+  padding: 8px 10px;
+  color: var(--light, var(--paper));
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.25;
+  pointer-events: none;
+  background: var(--green-dark);
+  border: 2px solid var(--paper);
+  box-shadow: 4px 4px 0 var(--burgundy);
+}
+
+.period-tooltip[hidden] {
+  display: none;
 }
 
 .period.seedbed {

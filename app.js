@@ -165,8 +165,51 @@ const scrollHint = document.querySelector("#scrollHint");
 const helpPanel = document.querySelector("#helpPanel");
 const helpButton = document.querySelector("#helpButton");
 const closeHelp = document.querySelector("#closeHelp");
+const periodTooltip = document.createElement("div");
+
+periodTooltip.className = "period-tooltip";
+periodTooltip.setAttribute("role", "status");
+periodTooltip.hidden = true;
+document.body.append(periodTooltip);
 
 document.documentElement.style.setProperty("--current-month", currentMonth);
+
+function hidePeriodTooltip() {
+  cropRows.querySelectorAll(".period.is-active").forEach((period) => {
+    period.classList.remove("is-active");
+    period.setAttribute("aria-expanded", "false");
+  });
+  periodTooltip.hidden = true;
+}
+
+function showPeriodTooltip(period) {
+  hidePeriodTooltip();
+  period.classList.add("is-active");
+  period.setAttribute("aria-expanded", "true");
+  periodTooltip.textContent = period.dataset.label;
+  periodTooltip.hidden = false;
+  periodTooltip.style.visibility = "hidden";
+
+  const periodRect = period.getBoundingClientRect();
+  const tooltipRect = periodTooltip.getBoundingClientRect();
+  const gap = 10;
+  const left = Math.min(
+    window.innerWidth - tooltipRect.width - gap,
+    Math.max(gap, periodRect.left + periodRect.width / 2 - tooltipRect.width / 2),
+  );
+  let top = periodRect.top - tooltipRect.height - gap;
+
+  if (top < gap) {
+    top = Math.min(
+      window.innerHeight - tooltipRect.height - gap,
+      periodRect.bottom + gap,
+    );
+  }
+
+  periodTooltip.style.left = `${left}px`;
+  periodTooltip.style.top = `${top}px`;
+  periodTooltip.style.visibility = "visible";
+}
 
 function visibleMonths() {
   return seasons[state.season];
@@ -246,9 +289,11 @@ function renderPeriods(periods, type, lane) {
         <span
           class="period ${type}${continuesBefore ? " continues-before" : ""}${continuesAfter ? " continues-after" : ""}"
           style="--start: ${start}; --end: ${end}; --lane: ${lane}"
-          role="img"
+          role="button"
           tabindex="0"
           aria-label="${periodLabel(type, periodStart, periodEnd)}"
+          aria-expanded="false"
+          data-label="${periodLabel(type, periodStart, periodEnd)}"
           title="${periodLabel(type, periodStart, periodEnd)}"
         >
           <span class="period-symbol" aria-hidden="true">${actionMeta[type].symbol}</span>
@@ -298,6 +343,7 @@ function filteredCrops() {
 }
 
 function renderCrops() {
+  hidePeriodTooltip();
   const visibleCrops = filteredCrops();
   renderMonths();
   cropRows.innerHTML = visibleCrops.map(cropTemplate).join("");
@@ -393,6 +439,35 @@ categorySelect.addEventListener("change", (event) => {
   state.category = event.target.value;
   renderCrops();
 });
+
+cropRows.addEventListener("click", (event) => {
+  const period = event.target.closest(".period");
+  if (!period) return;
+
+  const wasActive = period.classList.contains("is-active");
+  hidePeriodTooltip();
+  if (!wasActive) showPeriodTooltip(period);
+});
+
+cropRows.addEventListener("keydown", (event) => {
+  const period = event.target.closest(".period");
+  if (!period) return;
+
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    period.click();
+  } else if (event.key === "Escape") {
+    hidePeriodTooltip();
+    period.focus();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".period")) hidePeriodTooltip();
+});
+
+ganttScroll.addEventListener("scroll", hidePeriodTooltip, { passive: true });
+window.addEventListener("resize", hidePeriodTooltip);
 
 helpButton.addEventListener("click", () => {
   helpPanel.showModal();
