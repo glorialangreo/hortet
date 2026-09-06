@@ -883,6 +883,10 @@ footer a:hover {
 }
 
 @media (max-width: 520px) {
+  :root {
+    --crop-column: 120px;
+  }
+
   .hero-content {
     width: calc(100% - 32px);
   }
@@ -900,6 +904,15 @@ footer a:hover {
   }
 
   .category-filter > span {
+    display: none;
+  }
+
+  .crop-meta {
+    gap: 0;
+    padding: 10px;
+  }
+
+  .crop-icon {
     display: none;
   }
 
