@@ -1,6 +1,6 @@
 # Calendari de l'hort
 
-Visualitzador anual, en català, per planificar el planter, la sembra directa, la plantació i la
+Visualitzador anual, en català, per planificar la sembra directa, la sembra en planter, la plantació i la
 collita o floració dels cultius de l'hort. El calendari està ajustat al clima de la Partida de Baiona, a l'Alt
 Camp, i inclou filtres combinables per tasca, estació i família, cerca de cultius i una
 visualització mensual tipus Gantt amb icones i etiquetes.

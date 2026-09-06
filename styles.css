@@ -250,8 +250,7 @@ main {
   border-color: var(--harvest);
 }
 
-.direct-label-short,
-.harvest-label-short {
+.action-label-short {
   display: none;
 }
 
@@ -897,13 +896,11 @@ footer a:hover {
     display: none;
   }
 
-  .direct-label-full,
-  .harvest-label-full {
+  .action-label-full {
     display: none;
   }
 
-  .direct-label-short,
-  .harvest-label-short {
+  .action-label-short {
     display: inline;
   }
 

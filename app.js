@@ -139,10 +139,10 @@ const crops = [
 ];
 
 const actionMeta = {
-  seedbed: { label: "Planter", shortLabel: "Planter", compactLabel: "Plant.", symbol: "⌑" },
-  direct: { label: "Sembra directa", shortLabel: "Sembra", compactLabel: "Sem.", symbol: "•" },
-  planting: { label: "Plantar", shortLabel: "Plantar", compactLabel: "Planta", symbol: "↓" },
-  harvest: { label: "Collita o floració", shortLabel: "Collita", compactLabel: "Coll.", symbol: "✦" },
+  direct: { label: "Sembra (directa)", shortLabel: "Directa", compactLabel: "Directa", symbol: "•" },
+  seedbed: { label: "Sembra (planter)", shortLabel: "Fer Planter", compactLabel: "Fer Planter", symbol: "⌑" },
+  planting: { label: "Plantació", shortLabel: "Plantació", compactLabel: "Plantació", symbol: "↓" },
+  harvest: { label: "Collita / floració", shortLabel: "Collita", compactLabel: "Collita", symbol: "✦" },
 };
 const actionTypes = Object.keys(actionMeta);
 

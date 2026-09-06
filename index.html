@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Ultra&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260907-36" />
+    <link rel="stylesheet" href="styles.css?v=20260907-37" />
     <link rel="stylesheet" href="theme-bold.css?v=20260907-25" />
   </head>
   <body data-theme="bold">
@@ -63,35 +63,38 @@
             <button class="action-filter all active" type="button" data-action="all" aria-pressed="true">
               Totes
             </button>
-            <button class="action-filter seedbed active" type="button" data-action="seedbed" aria-pressed="true">
-              <svg viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M3 15.5h14M5 15.5l1 2h8l1-2M10 15V8" />
-                <path d="M10 10c-3 0-4.5-1.5-4.5-4.5C8.5 5.5 10 7 10 10ZM10 8c.5-3 2-4.5 5-4.5-.5 3-2 4.5-5 4.5Z" />
-              </svg>
-              Planter
-            </button>
             <button class="action-filter direct active" type="button" data-action="direct" aria-pressed="true">
               <svg viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M2.5 14.5h15M4 17h12" />
                 <ellipse cx="6" cy="9" rx="1.8" ry="2.4" transform="rotate(-35 6 9)" />
                 <ellipse cx="13.5" cy="7.5" rx="1.8" ry="2.4" transform="rotate(35 13.5 7.5)" />
               </svg>
-              <span class="direct-label-full">Sembra directa</span>
-              <span class="direct-label-short">Sembra</span>
+              <span class="action-label-full">Sembra (directa)</span>
+              <span class="action-label-short">Directa</span>
+            </button>
+            <button class="action-filter seedbed active" type="button" data-action="seedbed" aria-pressed="true">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M3 15.5h14M5 15.5l1 2h8l1-2M10 15V8" />
+                <path d="M10 10c-3 0-4.5-1.5-4.5-4.5C8.5 5.5 10 7 10 10ZM10 8c.5-3 2-4.5 5-4.5-.5 3-2 4.5-5 4.5Z" />
+              </svg>
+              <span class="action-label-full">Sembra (planter)</span>
+              <span class="action-label-short">Fer Planter</span>
             </button>
             <button class="action-filter planting active" type="button" data-action="planting" aria-pressed="true">
               <svg viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M10 2.5v10M6.5 9l3.5 3.5L13.5 9M2.5 16h15" />
               </svg>
-              Plantar
+              <span class="action-label-full">Plantació</span>
+              <span class="action-label-short">Plantació</span>
             </button>
             <button class="action-filter harvest active" type="button" data-action="harvest" aria-pressed="true">
               <svg viewBox="0 0 20 20" aria-hidden="true">
-                <circle cx="10" cy="10" r="2" />
-                <path d="M10 8c-2-4-5-3.5-5-1.5S7 10 8 10M12 10c1-3.5 3-5 4.5-3.5S14 10 12 10M10 12c-2 4-5 3.5-5 1.5S7 10 8 10M12 10c1 0 4 .5 4.5 3s-3 3-4.5-1" />
+                <circle cx="5.5" cy="6" r="2.5" />
+                <circle cx="5.5" cy="14" r="2.5" />
+                <path d="m7.7 7.2 8.8 5.6M7.7 12.8l8.8-5.6" />
               </svg>
-              <span class="harvest-label-full">Collita / floració</span>
-              <span class="harvest-label-short">Collita</span>
+              <span class="action-label-full">Collita / floració</span>
+              <span class="action-label-short">Collita</span>
             </button>
           </div>
         </div>
@@ -167,23 +170,23 @@
         <h2 id="helpTitle">Quatre moments, un hort ple de vida</h2>
         <div class="help-steps">
           <div>
-            <span class="step-number seedbed">1</span>
-            <h3>Planter</h3>
-            <p>Comença les llavors en safates o testos, protegides del fred o de la calor extrema.</p>
+            <span class="step-number direct">1</span>
+            <h3>Sembra (directa)</h3>
+            <p>Sembres la llavor directament al lloc definitiu.</p>
           </div>
           <div>
-            <span class="step-number direct">2</span>
-            <h3>Sembra directa</h3>
-            <p>Posa la llavor directament a la terra, al lloc on creixerà la planta.</p>
+            <span class="step-number seedbed">2</span>
+            <h3>Sembra (planter)</h3>
+            <p>Sembres la llavor en safata, test, alvèol, etc. per trasplantar-la després.</p>
           </div>
           <div>
             <span class="step-number planting">3</span>
-            <h3>Plantar</h3>
-            <p>Trasplanta el planter o planta bulbs i plançons al seu lloc definitiu.</p>
+            <h3>Plantació</h3>
+            <p>Plantes una planta o plançó, sigui comprat o que vingui del teu propi planter.</p>
           </div>
           <div>
             <span class="step-number harvest">4</span>
-            <h3>Collita</h3>
+            <h3>Collita / floració</h3>
             <p>Recull els fruits, fulles o arrels; en les plantes ornamentals indica la floració.</p>
           </div>
         </div>
@@ -202,6 +205,6 @@
       <span>Calendari orientatiu · Partida de Baiona, Alt Camp</span>
     </footer>
 
-    <script src="app.js?v=20260907-8"></script>
+    <script src="app.js?v=20260907-9"></script>
   </body>
 </html>
