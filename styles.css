@@ -822,7 +822,7 @@ footer a:hover {
 
 @media (max-width: 800px) {
   :root {
-    --crop-column: 150px;
+    --crop-column: 120px;
     --month-column: 56px;
   }
 
@@ -872,6 +872,15 @@ footer a:hover {
     display: flex;
   }
 
+  .crop-meta {
+    gap: 0;
+    padding: 10px;
+  }
+
+  .crop-icon {
+    display: none;
+  }
+
   .tip-card {
     padding: 30px 24px;
     margin: 36px auto 52px;
@@ -883,10 +892,6 @@ footer a:hover {
 }
 
 @media (max-width: 520px) {
-  :root {
-    --crop-column: 120px;
-  }
-
   .hero-content {
     width: calc(100% - 32px);
   }
@@ -904,15 +909,6 @@ footer a:hover {
   }
 
   .category-filter > span {
-    display: none;
-  }
-
-  .crop-meta {
-    gap: 0;
-    padding: 10px;
-  }
-
-  .crop-icon {
     display: none;
   }
 
