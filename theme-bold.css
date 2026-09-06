@@ -502,10 +502,6 @@ body[data-theme="bold"] .tip-card p {
   font-size: 1.05rem;
 }
 
-body[data-theme="bold"] .tip-figure {
-  display: none;
-}
-
 body[data-theme="bold"] .help-button {
   color: var(--highlight);
   font-size: 0.82rem;

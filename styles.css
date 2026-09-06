@@ -68,33 +68,21 @@ button {
 
 .hero {
   position: relative;
-  height: clamp(340px, 31vw, 480px);
+  height: clamp(240px, 24vw, 340px);
   overflow: hidden;
   color: var(--ink);
   background: var(--paper);
   border-bottom: 1px solid var(--line);
 }
 
-.hero-banner {
-  position: relative;
-  left: 50%;
-  display: block;
-  width: 112%;
-  max-width: none;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 66%;
-  transform: translateX(-50%);
-}
-
 .hero-content {
   position: absolute;
-  top: 24%;
-  left: 46%;
+  top: 50%;
+  left: 50%;
   z-index: 2;
-  width: min(62%, 820px);
+  width: min(calc(100% - 40px), 820px);
   text-align: center;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .help-button {
@@ -148,19 +136,6 @@ button {
   font-weight: 400;
 }
 
-
-.hero-visual {
-  position: relative;
-  margin: 0;
-  padding: 0 0 24px;
-}
-
-.specimen {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-}
 
 main {
   --gutter: 20px;
@@ -706,8 +681,7 @@ main {
 
 .tip-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
-  gap: clamp(28px, 4vw, 56px);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   padding: 32px 0;
   margin: 20px auto 36px;
@@ -716,7 +690,7 @@ main {
 }
 
 .tip-copy {
-  max-width: 620px;
+  max-width: 760px;
 }
 
 .tip-card h2 {
@@ -729,23 +703,6 @@ main {
   margin: 22px 0 0;
   color: var(--ink-soft);
   line-height: 1.7;
-}
-
-.tip-figure {
-  margin: 0 calc(-1 * var(--gutter)) 0 0;
-}
-
-.tip-figure .specimen {
-  display: block;
-  max-height: 330px;
-  width: auto;
-  margin: 0 0 0 auto;
-}
-
-@media (min-width: 1280px) {
-  .tip-figure {
-    margin-right: calc(-1 * (100vw - 1240px) / 2);
-  }
 }
 
 footer {
@@ -840,31 +797,23 @@ footer a:hover {
 @media (max-width: 900px) {
   .hero {
     display: block;
-    height: clamp(280px, 42vw, 360px);
+    height: clamp(230px, 34vw, 300px);
     padding-top: 0;
   }
 
   .hero-content {
     position: absolute;
-    top: 22%;
-    left: 46%;
+    top: 50%;
+    left: 50%;
     width: calc(100% - 40px);
     margin: 0;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
   }
 
   .hero h1 {
     font-size: clamp(2.8rem, 7vw, 4rem);
   }
 
-  .hero-banner {
-    width: 120%;
-    height: 100%;
-    margin-top: 0;
-    aspect-ratio: auto;
-    object-fit: cover;
-    object-position: center 68%;
-  }
 }
 
 @media (max-width: 800px) {
@@ -916,14 +865,8 @@ footer a:hover {
   }
 
   .tip-card {
-    grid-template-columns: minmax(0, 1fr) minmax(190px, 280px);
-    gap: 24px;
     padding: 28px 0;
     margin: 20px auto 32px;
-  }
-
-  .tip-figure .specimen {
-    max-height: 260px;
   }
 
   .help-steps {
@@ -934,13 +877,7 @@ footer a:hover {
 @media (max-width: 520px) {
   .hero {
     height: 240px;
-    padding-top: 34px;
-  }
-
-  .hero-banner {
-    width: 150%;
-    aspect-ratio: auto;
-    object-position: center 70%;
+    padding-top: 0;
   }
 
   .hero h1 {
@@ -973,10 +910,6 @@ footer a:hover {
   .tip-card {
     display: block;
     padding: 24px 0;
-  }
-
-  .tip-figure {
-    display: none;
   }
 
   footer {
