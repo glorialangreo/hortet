@@ -22,13 +22,8 @@ Per al calçot, el calendari pressuposa que es parteix de ceba mare: es planta d
 entre agost i setembre i es cull de novembre a abril. La referència del cicle tradicional és:
 [cultiu del calçot](https://www.calsots.com/los-calsots.html/#cultivo).
 
-## Làmines botàniques
+## Versions visuals
 
-Les il·lustracions actuals han estat aportades específicament per a aquest projecte i no utilitzen
-les reproduccions de Wikimedia Commons explorades durant el procés de disseny.
-
-- `assets/hero-banner.jpg`: composició botànica en color de la capçalera.
-- `assets/fig-bancal.jpg`: il·lustració del mòdul sobre el clima de la Partida de Baiona.
-
-`index.html` utilitza el tema rosa. `arxiu.html` conserva el tema editorial inicial i comparteix
-el mateix `app.js`, de manera que tots dos mantenen les mateixes dades, filtres i interaccions.
+`index.html` és la versió principal, amb colors estacionals i una direcció gràfica més funk.
+Si prefereixes una presentació més neutra, `arxiu.html` utilitza les mateixes dades, filtres i
+interaccions amb un disseny editorial més discret.
