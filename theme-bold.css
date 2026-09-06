@@ -585,12 +585,43 @@ body[data-theme="bold"] .dialog-note {
   }
 
   body[data-theme="bold"] .season-tab {
+    display: flex;
+    flex: 1 1 0;
+    gap: 1px;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 10px 2px;
+    font-size: 0.56rem;
+    letter-spacing: 0.015em;
+    white-space: nowrap;
+  }
+
+  body[data-theme="bold"] .season-tab span {
+    margin-right: 0;
+  }
+
+  body[data-theme="bold"] .action-filters {
+    flex-wrap: nowrap;
+    gap: 5px;
+    width: 100%;
+  }
+
+  body[data-theme="bold"] .action-filter {
     flex: 1 1 0;
     gap: 3px;
     min-width: 0;
-    padding: 10px 5px;
-    font-size: 0.64rem;
-    letter-spacing: 0.045em;
+    min-height: 36px;
+    padding: 6px 3px;
+    font-size: 0.68rem;
+    white-space: nowrap;
+    box-shadow: 2px 2px 0 var(--green);
+  }
+
+  body[data-theme="bold"] .action-filter svg {
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
   }
 
   body[data-theme="bold"] .tip-card {
