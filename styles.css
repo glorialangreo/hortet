@@ -896,6 +896,10 @@ footer a:hover {
     display: none;
   }
 
+  .action-filter svg {
+    display: none;
+  }
+
   .action-label-full {
     display: none;
   }

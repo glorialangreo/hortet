@@ -140,7 +140,12 @@ const crops = [
 
 const actionMeta = {
   direct: { label: "Sembra (directa)", shortLabel: "Directa", compactLabel: "Directa", symbol: "•" },
-  seedbed: { label: "Sembra (planter)", shortLabel: "Fer Planter", compactLabel: "Fer Planter", symbol: "⌑" },
+  seedbed: {
+    label: "Sembra (planter)",
+    shortLabel: "Sembra en planter",
+    compactLabel: "Sembra en planter",
+    symbol: "⌑",
+  },
   planting: { label: "Plantació", shortLabel: "Plantació", compactLabel: "Plantació", symbol: "↓" },
   harvest: { label: "Collita / floració", shortLabel: "Collita", compactLabel: "Collita", symbol: "✦" },
 };

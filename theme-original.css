@@ -438,6 +438,10 @@ body[data-theme="original"] .step-number {
     white-space: nowrap;
   }
 
+  body[data-theme="original"] .action-filter.seedbed {
+    flex-grow: 1.75;
+  }
+
   body[data-theme="original"] .action-filter svg {
     width: 14px;
     height: 14px;
