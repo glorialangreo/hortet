@@ -81,46 +81,6 @@ button {
   border-radius: 50% 50% 0 0 / 38% 38% 0 0;
 }
 
-.topbar {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: min(1180px, calc(100% - 48px));
-  padding: 24px 0;
-  margin: 0 auto;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.brand {
-  display: inline-flex;
-  gap: 11px;
-  align-items: center;
-  color: inherit;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  text-decoration: none;
-}
-
-.brand-mark {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  place-items: center;
-}
-
-.brand-mark svg {
-  width: 26px;
-  fill: none;
-  stroke: #e8c375;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.7;
-}
-
 .help-button {
   display: inline-flex;
   gap: 8px;
@@ -130,6 +90,10 @@ button {
   cursor: pointer;
   background: none;
   border: 0;
+}
+
+.hero-content .help-button {
+  margin-top: 18px;
 }
 
 .help-button:hover {
@@ -919,21 +883,12 @@ footer a:hover {
 }
 
 @media (max-width: 520px) {
-  .topbar,
   .hero-content {
     width: calc(100% - 32px);
   }
 
-  .topbar {
-    padding-top: 16px;
-  }
-
-  .help-button {
-    font-size: 0;
-  }
-
   .help-button svg {
-    width: 24px;
+    width: 20px;
   }
 
   .hero-content {
