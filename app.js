@@ -51,10 +51,18 @@ const crops = [
   { name: "Carbassa", category: "Fruits", icon: "◉", seedbed: [[3, 4]], direct: [[5, 5]], planting: [[5, 5]], harvest: [[9, 10]] },
   { name: "Meló", category: "Fruits", icon: "◎", seedbed: [[3, 4]], direct: [[5, 5]], planting: [[5, 5]], harvest: [[7, 9]] },
   { name: "Síndria", category: "Fruits", icon: "◉", seedbed: [[3, 4]], direct: [[5, 5]], planting: [[5, 5]], harvest: [[7, 9]] },
-  { name: "Mongeta", category: "Lleguminoses", icon: "⌁", direct: [[4, 6], [8, 8]], harvest: [[6, 10]] },
+  { name: "Blat de moro dolç", category: "Fruits", icon: "▥", seedbed: [[3, 4]], direct: [[4, 6]], planting: [[4, 5]], harvest: [[7, 9]] },
+  { name: "Bitxo", category: "Fruits", icon: "♢", seedbed: [[1, 3]], planting: [[4, 5]], harvest: [[7, 11]] },
+  { name: "Tomàquet cherry", category: "Fruits", icon: "⁙", seedbed: [[2, 3]], planting: [[4, 5]], harvest: [[6, 10]] },
+  { name: "Okra", category: "Fruits", icon: "✦", seedbed: [[3, 4]], direct: [[5, 6]], planting: [[5, 6]], harvest: [[7, 10]] },
+  { name: "Lufa", category: "Fruits", icon: "◐", seedbed: [[3, 4]], direct: [[5, 5]], planting: [[5, 5]], harvest: [[8, 10]] },
+  { name: "Mongeta tendra", category: "Lleguminoses", icon: "⌁", direct: [[4, 6], [8, 8]], harvest: [[6, 10]] },
+  { name: "Mongeta seca", category: "Lleguminoses", icon: "⌁", direct: [[4, 6]], harvest: [[8, 10]] },
   { name: "Pèsol", category: "Lleguminoses", icon: "••", direct: [[1, 3], [10, 11]], harvest: [[3, 5]] },
   { name: "Fava", category: "Lleguminoses", icon: "⌇", direct: [[1, 2], [10, 12]], harvest: [[3, 5]] },
   { name: "Tramús (lupí)", category: "Lleguminoses", icon: "♧", direct: [[2, 3], [10, 12]], harvest: [[5, 7]] },
+  { name: "Llentia", category: "Lleguminoses", icon: "••", direct: [[1, 2], [10, 12]], harvest: [[5, 7]] },
+  { name: "Cigró", category: "Lleguminoses", icon: "●", direct: [[2, 4]], harvest: [[7, 8]] },
   { name: "Enciam", category: "Fulles", icon: "≋", seedbed: [[1, 5], [8, 11]], direct: [[2, 4], [9, 10]], planting: [[2, 6], [9, 12]], harvest: [[1, 6], [9, 12]] },
   { name: "Canonges", category: "Fulles", icon: "✣", direct: [[9, 11]], harvest: [[1, 3], [11, 12]] },
   { name: "Ruca", category: "Fulles", icon: "⌇", direct: [[2, 5], [9, 11]], harvest: [[1, 6], [10, 12]] },
@@ -64,27 +72,43 @@ const crops = [
   { name: "Kale", category: "Fulles", icon: "♣", seedbed: [[7, 8]], direct: [[9, 10]], planting: [[9, 10]], harvest: [[1, 3], [10, 12]] },
   { name: "Mostassa", category: "Fulles", icon: "⌇", direct: [[2, 4], [9, 11]], harvest: [[3, 5], [10, 12]] },
   { name: "Pak choi", category: "Fulles", icon: "♜", seedbed: [[8, 9]], direct: [[9, 10]], planting: [[9, 10]], harvest: [[10, 12]] },
+  { name: "Endívia (witloof)", category: "Fulles", icon: "≋", direct: [[5, 6]], harvest: [[1, 3], [12, 12]] },
+  { name: "Borratja", category: "Fulles", icon: "✣", direct: [[2, 4], [9, 10]], harvest: [[3, 6], [10, 12]] },
   { name: "Bròcoli", category: "Cols", icon: "♣", seedbed: [[7, 8]], planting: [[9, 10]], harvest: [[1, 3], [11, 12]] },
   { name: "Coliflor", category: "Cols", icon: "✾", seedbed: [[7, 8]], planting: [[9, 10]], harvest: [[1, 3], [11, 12]] },
   { name: "Romanesco", category: "Cols", icon: "♢", seedbed: [[7, 8]], planting: [[9, 10]], harvest: [[1, 3], [12, 12]] },
   { name: "Col llombarda", category: "Cols", icon: "◉", seedbed: [[7, 8]], planting: [[9, 10]], harvest: [[1, 3], [11, 12]] },
   { name: "Col", category: "Cols", icon: "◎", seedbed: [[1, 2], [7, 8]], planting: [[3, 4], [9, 10]], harvest: [[1, 3], [5, 6], [11, 12]] },
   { name: "Col de Brussel·les", category: "Cols", icon: "⁙", seedbed: [[6, 7]], planting: [[9, 9]], harvest: [[1, 3], [12, 12]] },
+  { name: "Colrave", category: "Cols", icon: "◉", seedbed: [[2, 4], [7, 9]], direct: [[3, 4], [8, 9]], planting: [[3, 5], [8, 10]], harvest: [[4, 6], [10, 12]] },
   { name: "Pastanaga", category: "Arrels", icon: "▼", direct: [[2, 6], [9, 10]], harvest: [[1, 2], [5, 12]] },
   { name: "Rave", category: "Arrels", icon: "●", direct: [[2, 5], [9, 11]], harvest: [[3, 6], [10, 12]] },
   { name: "Remolatxa", category: "Arrels", icon: "●", seedbed: [[2, 4], [8, 9]], direct: [[2, 6], [8, 10]], planting: [[3, 5], [9, 10]], harvest: [[1, 2], [5, 7], [10, 12]] },
   { name: "Nap", category: "Arrels", icon: "◆", direct: [[2, 4], [8, 10]], harvest: [[4, 6], [10, 12]] },
   { name: "Patata", category: "Arrels", icon: "●", planting: [[2, 3], [8, 9]], harvest: [[5, 7], [11, 12]] },
+  { name: "Moniato", category: "Arrels", icon: "●", planting: [[5, 6]], harvest: [[9, 11]] },
+  { name: "Xirivia", category: "Arrels", icon: "▽", direct: [[2, 5]], harvest: [[1, 3], [9, 12]] },
+  { name: "Nap suec", category: "Arrels", icon: "◆", seedbed: [[6, 8]], direct: [[7, 9]], planting: [[8, 10]], harvest: [[1, 2], [11, 12]] },
   { name: "Ceba", category: "Bulbs i tiges", icon: "◉", seedbed: [[1, 2], [8, 10]], direct: [[1, 3], [9, 10]], planting: [[3, 4], [10, 12]], harvest: [[5, 8]] },
-  { name: "Calçot", category: "Bulbs i tiges", icon: "╽", seedbed: [[10, 12]], planting: [[2, 3], [7, 8]], harvest: [[1, 3], [11, 12]] },
+  { name: "Calçot", category: "Bulbs i tiges", icon: "╽", planting: [[8, 9]], harvest: [[1, 4], [11, 12]] },
   { name: "All", category: "Bulbs i tiges", icon: "♢", planting: [[1, 1], [10, 12]], harvest: [[5, 7]] },
   { name: "Porro", category: "Bulbs i tiges", icon: "╿", seedbed: [[1, 4], [8, 9]], planting: [[4, 6], [10, 11]], harvest: [[1, 4], [8, 12]] },
   { name: "Api", category: "Bulbs i tiges", icon: "♜", seedbed: [[2, 4], [7, 8]], planting: [[5, 6], [9, 10]], harvest: [[1, 3], [9, 12]] },
+  { name: "Fonoll", category: "Bulbs i tiges", icon: "♜", seedbed: [[1, 2], [7, 8]], direct: [[2, 3], [8, 9]], planting: [[3, 4], [9, 10]], harvest: [[1, 2], [5, 6], [11, 12]] },
+  { name: "Card", category: "Bulbs i tiges", icon: "♠", seedbed: [[2, 4]], direct: [[3, 5]], planting: [[4, 5]], harvest: [[1, 3], [11, 12]] },
   { name: "Carxofa", category: "Perennes", icon: "♠", seedbed: [[2, 3]], planting: [[4, 5], [9, 10]], harvest: [[1, 5], [10, 12]] },
   { name: "Maduixa", category: "Perennes", icon: "♥", planting: [[2, 3], [10, 11]], harvest: [[4, 6]] },
+  { name: "Espàrrec", category: "Perennes", icon: "╿", seedbed: [[3, 4]], planting: [[2, 3]], harvest: [[3, 5]] },
+  { name: "Ruibarbre", category: "Perennes", icon: "♠", seedbed: [[2, 3]], planting: [[1, 3], [11, 12]], harvest: [[3, 5]] },
   { name: "Alfàbrega", category: "Aromàtiques", icon: "♣", seedbed: [[3, 4]], direct: [[5, 6]], planting: [[5, 6]], harvest: [[6, 10]] },
   { name: "Julivert", category: "Aromàtiques", icon: "✣", direct: [[2, 6], [9, 10]], harvest: [[1, 12]] },
   { name: "Coriandre (cilantre)", category: "Aromàtiques", icon: "✣", direct: [[2, 4], [9, 11]], harvest: [[1, 5], [11, 12]] },
+  { name: "Romaní", category: "Aromàtiques", icon: "♣", seedbed: [[2, 4]], planting: [[3, 5], [9, 10]], harvest: [[1, 12]] },
+  { name: "Farigola", category: "Aromàtiques", icon: "⌇", seedbed: [[2, 4]], direct: [[3, 4]], planting: [[3, 5], [9, 10]], harvest: [[3, 11]] },
+  { name: "Orenga", category: "Aromàtiques", icon: "✣", seedbed: [[2, 4]], direct: [[3, 4]], planting: [[3, 5], [9, 10]], harvest: [[5, 10]] },
+  { name: "Sàlvia", category: "Aromàtiques", icon: "♠", seedbed: [[2, 4]], planting: [[3, 5], [9, 10]], harvest: [[3, 11]] },
+  { name: "Menta", category: "Aromàtiques", icon: "♣", seedbed: [[2, 4]], planting: [[3, 5], [9, 10]], harvest: [[4, 11]] },
+  { name: "Espígol", category: "Aromàtiques", icon: "♟", seedbed: [[2, 4]], planting: [[3, 5], [9, 10]], harvest: [[6, 8]] },
   { name: "Camamilla", category: "Flors", icon: "✿", seedbed: [[2, 3]], direct: [[3, 4], [9, 10]], planting: [[3, 4]], harvest: [[4, 7]] },
   { name: "Calèndula", category: "Flors", icon: "✺", seedbed: [[2, 3], [8, 9]], direct: [[2, 4], [9, 11]], planting: [[3, 4], [10, 11]], harvest: [[2, 6], [10, 12]] },
   { name: "Crisantem", category: "Flors", icon: "✹", seedbed: [[2, 4]], planting: [[3, 5], [9, 10]], harvest: [[9, 11]] },
@@ -92,6 +116,26 @@ const crops = [
   { name: "Rosella", category: "Flors", icon: "✽", direct: [[2, 3], [10, 11]], harvest: [[4, 6]] },
   { name: "Narcís", category: "Flors", icon: "✦", planting: [[10, 12]], harvest: [[2, 4]] },
   { name: "Muscari", category: "Flors", icon: "♟", planting: [[10, 12]], harvest: [[2, 4]] },
+  { name: "Caputxina", category: "Flors", icon: "✿", seedbed: [[3, 4]], direct: [[4, 5]], planting: [[4, 5]], harvest: [[6, 10]] },
+  { name: "Clavell de moro (tagetes)", category: "Flors", icon: "✺", seedbed: [[2, 4]], direct: [[4, 5]], planting: [[4, 5]], harvest: [[5, 11]] },
+  { name: "Gira-sol", category: "Flors", icon: "☀", seedbed: [[3, 4]], direct: [[3, 6]], planting: [[4, 5]], harvest: [[6, 10]] },
+  { name: "Cosmos", category: "Flors", icon: "✿", seedbed: [[3, 4]], direct: [[4, 5]], planting: [[4, 5]], harvest: [[6, 11]] },
+  { name: "Zínnia", category: "Flors", icon: "✹", seedbed: [[3, 4]], direct: [[4, 5]], planting: [[4, 5]], harvest: [[6, 11]] },
+  { name: "Blauet", category: "Flors", icon: "✽", seedbed: [[2, 3]], direct: [[2, 4], [9, 11]], planting: [[3, 4]], harvest: [[4, 7]] },
+  { name: "Alís marítim", category: "Flors", icon: "⁙", seedbed: [[2, 4], [8, 9]], direct: [[2, 4], [9, 10]], planting: [[3, 5], [9, 10]], harvest: [[2, 6], [9, 12]] },
+  { name: "Dàlia", category: "Flors", icon: "✹", seedbed: [[2, 3]], planting: [[4, 5]], harvest: [[7, 11]] },
+  { name: "Sàlvia ornamental", category: "Flors", icon: "♜", seedbed: [[2, 4]], planting: [[4, 5], [9, 10]], harvest: [[5, 11]] },
+  { name: "Gaura", category: "Flors", icon: "✣", seedbed: [[2, 4]], planting: [[3, 5], [9, 10]], harvest: [[5, 11]] },
+  { name: "Gazània", category: "Flors", icon: "☼", seedbed: [[2, 4]], direct: [[4, 5]], planting: [[4, 5]], harvest: [[5, 11]] },
+  { name: "Rudbèquia", category: "Flors", icon: "✺", seedbed: [[2, 4]], direct: [[4, 5], [9, 10]], planting: [[4, 5], [9, 10]], harvest: [[6, 10]] },
+  { name: "Equinàcia", category: "Flors", icon: "✹", seedbed: [[2, 4]], direct: [[10, 11]], planting: [[3, 5], [9, 10]], harvest: [[6, 9]] },
+  { name: "Revetlla", category: "Flors", icon: "✣", seedbed: [[2, 4]], planting: [[4, 5]], harvest: [[6, 11]] },
+  { name: "Pensament", category: "Flors", icon: "✿", seedbed: [[6, 8]], planting: [[2, 3], [9, 11]], harvest: [[1, 5], [10, 12]] },
+  { name: "Boca de drac", category: "Flors", icon: "♜", seedbed: [[1, 3], [7, 8]], direct: [[9, 10]], planting: [[3, 4], [9, 10]], harvest: [[3, 6], [10, 12]] },
+  { name: "Anemone", category: "Flors", icon: "✿", planting: [[10, 12]], harvest: [[2, 5]] },
+  { name: "Ranuncle", category: "Flors", icon: "✺", planting: [[1, 2], [10, 12]], harvest: [[3, 5]] },
+  { name: "Tulipa", category: "Flors", icon: "♟", planting: [[10, 12]], harvest: [[3, 5]] },
+  { name: "Iris", category: "Flors", icon: "✦", planting: [[7, 10]], harvest: [[3, 6]] },
 ];
 
 const actionMeta = {
@@ -118,7 +162,7 @@ const emptyState = document.querySelector("#emptyState");
 const gantt = document.querySelector("#gantt");
 const ganttScroll = document.querySelector("#ganttScroll");
 const scrollHint = document.querySelector("#scrollHint");
-const helpDialog = document.querySelector("#helpDialog");
+const helpPanel = document.querySelector("#helpPanel");
 const helpButton = document.querySelector("#helpButton");
 const closeHelp = document.querySelector("#closeHelp");
 
@@ -304,10 +348,17 @@ function syncSeasonTabs() {
   });
 }
 
+function syncSeasonTheme() {
+  if (document.body.dataset.theme === "bold") {
+    document.body.dataset.seasonTheme = state.season;
+  }
+}
+
 document.querySelectorAll(".season-tab").forEach((button) => {
   button.addEventListener("click", () => {
     state.season = button.dataset.season;
     syncSeasonTabs();
+    syncSeasonTheme();
     renderCrops();
     focusSeason(state.season);
   });
@@ -344,17 +395,23 @@ categorySelect.addEventListener("change", (event) => {
 });
 
 helpButton.addEventListener("click", () => {
-  helpDialog.showModal();
-  helpButton.setAttribute("aria-expanded", "true");
+  helpPanel.showModal();
 });
 
-closeHelp.addEventListener("click", () => helpDialog.close());
-helpDialog.addEventListener("close", () => helpButton.setAttribute("aria-expanded", "false"));
-helpDialog.addEventListener("click", (event) => {
-  if (event.target === helpDialog) helpDialog.close();
+closeHelp.addEventListener("click", () => {
+  helpPanel.close();
+});
+
+helpPanel.addEventListener("click", (event) => {
+  if (event.target === helpPanel) helpPanel.close();
+});
+
+helpPanel.addEventListener("close", () => {
+  helpButton.focus();
 });
 
 populateCategories();
 syncSeasonTabs();
+syncSeasonTheme();
 renderCrops();
 focusSeason(state.season, "auto");
