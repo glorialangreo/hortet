@@ -424,6 +424,7 @@ main {
 }
 
 .category-filter {
+  position: relative;
   display: flex;
   gap: 9px;
   align-items: center;
@@ -432,9 +433,23 @@ main {
   font-weight: 600;
 }
 
+.category-filter::after {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 7px;
+  height: 7px;
+  pointer-events: none;
+  content: "";
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-68%) rotate(45deg);
+}
+
 .category-filter select {
+  appearance: none;
   min-width: 130px;
-  padding: 0 34px 0 12px;
+  padding: 0 42px 0 12px;
 }
 
 .result-count {
