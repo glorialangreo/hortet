@@ -343,6 +343,14 @@ body[data-theme="original"] .help-button {
   color: var(--green);
 }
 
+body[data-theme="original"] .tip-actions .help-button {
+  margin-top: 0;
+}
+
+body[data-theme="original"] .repo-link {
+  color: var(--burgundy);
+}
+
 body[data-theme="original"] footer {
   color: #c9d4cc;
   background: var(--green-dark);

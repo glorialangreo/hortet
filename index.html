@@ -53,8 +53,8 @@
       href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Ultra&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260907-41" />
-    <link rel="stylesheet" href="theme-bold.css?v=20260907-28" />
+    <link rel="stylesheet" href="styles.css?v=20260907-42" />
+    <link rel="stylesheet" href="theme-bold.css?v=20260907-29" />
   </head>
   <body data-theme="bold">
     <!--
@@ -198,18 +198,32 @@
             frescos i les possibles gelades. Són orientatives: adapta-les segons la varietat,
             l’exposició del tros i el temps de cada any.
           </p>
-          <button
-            class="help-button"
-            id="helpButton"
-            type="button"
-            aria-haspopup="dialog"
-            aria-controls="helpPanel"
-          >
-            Com llegir el calendari
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="m8 5 7 7-7 7" />
-            </svg>
-          </button>
+          <div class="tip-actions">
+            <button
+              class="help-button"
+              id="helpButton"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="helpPanel"
+            >
+              Com llegir el calendari
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m8 5 7 7-7 7" />
+              </svg>
+            </button>
+            <a
+              class="help-button repo-link"
+              href="https://github.com/glorialangreo/hortet"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Obre el repositori per proposar canvis, modificar-lo o fer-ne un fork"
+            >
+              Proposa canvis o adapta’l
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M9 7h8v8" />
+              </svg>
+            </a>
+          </div>
         </div>
       </aside>
 

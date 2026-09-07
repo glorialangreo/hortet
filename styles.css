@@ -120,6 +120,22 @@ button {
   transform: translateX(3px);
 }
 
+.tip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.tip-actions .help-button {
+  margin-top: 0;
+}
+
+.repo-link {
+  text-decoration: none;
+}
+
 .hero h1 {
   margin: 0;
   font-family: var(--font-editorial);

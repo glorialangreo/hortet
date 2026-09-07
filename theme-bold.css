@@ -514,6 +514,10 @@ body[data-theme="bold"] .help-button {
   border-bottom-width: 2px;
 }
 
+body[data-theme="bold"] .repo-link {
+  color: var(--planting-soft);
+}
+
 body[data-theme="bold"] footer {
   color: var(--light);
   background: var(--green-dark);
